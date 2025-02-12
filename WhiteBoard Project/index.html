@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=palette" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+    
+        <div class="toolBar" id="toolBar">
+
+           
+            <div class="tools" id="tools">
+                
+                    <div class="tool">
+                        <img src="./NewIcons/Black_Pencil.svg" alt="" id="pencil" class="pencil"> 
+                        
+                    </div>
+                    <div class="tool">
+                        <img src="./NewIcons/Eraser.svg" alt="" id="eraser">
+                        
+                    </div>
+                
+
+                
+                    <div class="tool">
+                        <img src="./NewIcons/StickyNote.svg" alt="" id="sticky">
+                    </div>
+                    <div class="tool">
+                        <img src="./NewIcons/Photo.svg" alt="" id="upload">
+                    </div>
+                    <div class="tool" >
+                        <img src="./NewIcons/Download.svg" alt="" id="download">
+                    </div>
+                    <div class="tool">
+                        <img src="./NewIcons/Undo.svg" alt="" id="undo">
+                    </div>
+                    <div class="tool"><img src="./NewIcons/Redo.svg" alt=""  id="redo"></div>
+                    <div class="tool">
+                        <img src="./NewIcons/arrow_14133986.png" id="cancelAll">
+                    </div>
+
+                
+              
+    
+            </div>
+    
+           
+    
+          
+            <div class="selectColor" id="selectColor">
+              
+                <div class="buttonColor">
+                    <button class="color-btn" id="color-btn" style="background-color: #ff0000;" data-color="#ff0000"></button>
+                    <button class="color-btn" id="color-btn" style="background-color: #00ff00;" data-color="#00ff00"></button>
+                    <button class="color-btn" id="color-btn"  style="background-color: #0000ff;" data-color="#0000ff"></button>
+                    <button class="color-btn" id="color-btn" style="background-color: #000000;" data-color="#000000"></button>
+    
+             
+                    <button class="color-btn" id="color-btn" style="background-color: #ffff00;" data-color="#ffff00"></button> 
+                    <button class="color-btn"  id="color-btn" style="background-color: #ff1493;" data-color="#ff1493"></button> 
+                     <button class="color-btn" id="color-btn" style="background-color: #800080;" data-color="#800080"></button> 
+                     <button class="color-btn" id="color-btn" style="background-color: #ffa500;" data-color="#ffa500"></button>
+         
+                
+                </div>
+            </div>  
+            <input type="file" class="input-tag" id="input-tag">
+         </div>
+
+        <div class="Pencilsize">
+            <button class="pencilbtn">Pencil Size</button>
+            <div>
+                <input type="range" min="1" max="10" value="0" class="inputpencil" id="input">
+
+            </div>
+           
+
+        </div>
+        <div class="Erasersize">
+            <button class="eraserbtn">Eraser Size</button>
+            <div>
+                <input type="range" min="1" max="20" value="0"  id="inputeraser">
+
+            </div>
+
+
+
+          </div>
+
+  <canvas id="canvas"></canvas>
+
+ 
+   
+
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
+
+
+

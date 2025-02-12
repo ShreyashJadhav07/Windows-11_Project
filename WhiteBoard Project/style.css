@@ -1,0 +1,222 @@
+img{
+    height: 3rem;
+}
+.tools{
+    display: flex;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color:white;
+    position: relative;
+    z-index: 3;
+    
+    
+
+}
+
+.tool {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.tool.selected {
+    background-color: rgba(0, 0, 0, 0.05); 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); 
+    transform: scale(1.05); 
+}
+
+.toolBar{
+    
+    display: flex;
+    justify-content: center;
+     align-items: center; 
+     margin-left: -33rem;
+     margin-top: 0.2rem;
+
+} 
+
+.tools{
+    display: flex;
+    position: relative;
+    left: 16rem;
+    gap: 3rem;
+    
+    
+    
+}
+
+.tool:hover{
+    
+    cursor: pointer;
+    
+}
+
+ .selectColor{
+    position: absolute;
+    top: 41rem;
+    right: 36rem;
+
+} 
+
+
+
+
+
+/* sticky */
+
+.sticky{
+    height: 10rem;
+    width: 6rem;
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+}
+
+.nav{
+    border          : 1px solid black;
+    height          : 20%;
+    background-color: aquamarine;
+    display         : flex;
+    justify-content : flex-end;
+    gap             : 1rem;
+    width: 13.84rem;
+
+}
+
+.textarea {
+    height: 104%;
+    width : 231%;
+}
+
+.color-btnn{
+    width:20px ;
+    height: 20px;
+    border-radius:80%;
+    border: none;           
+    cursor: pointer;       
+    display: inline-block;  
+    
+    
+    
+}
+
+.input-tag{
+    display: none;
+}
+
+.upload-img{
+    height: 130%;
+    width: 231%;
+
+}
+
+
+
+
+
+
+
+
+.button.selector button {
+    background-color: #ffffff;
+    color: #333; 
+    border: 2px solid #000; 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+}
+
+.button.selector button:hover {
+    background-color: #f0f0f0; 
+    border-color: #555;
+}
+
+.button.selector button::after {
+    content: " 🎨";
+}
+
+
+
+
+
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.color-btn.selected {
+    outline: 3px solid rgb(245, 207, 207); 
+    box-shadow: 0px 0px 8px rgba(234, 233, 233, 0.5);
+}
+
+
+
+.Pencilsize{
+    position: absolute;
+    top: 41rem;
+    margin-left: 5rem;
+}
+.Erasersize{
+    position: absolute;
+    top: 41rem;
+    margin-left: 17rem;
+}
+.pencilbtn{
+    
+    color:black;
+    border: none;
+    
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.inputpencil{
+    cursor: pointer;
+}
+
+
+.eraserbtn{
+    
+    color:black;
+    border: none;
+    
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#inputeraser {
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
