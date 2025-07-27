@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
-  <link rel="stylesheet" href="./reset.css" />
-  <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./styel.css">
 </head>
 <body>
+ 
+    <header>
+        <div class="input-btn">
+            <input type="text" placeholder="Search location..." class="search-input" id="search-input">
 
-  <header>
-    <div class="input-btn">
-      <input type="text" placeholder="Search location..." class="search-input" id="search-input" />
-      <button class="button" id="button">Search</button>
-    </div>
-    <div class="heading" id="heading">Delhi</div>
-  </header>
+            <button class="button" id="button">Search</button>
 
-  <main>
-    <div class="weather-container">
-      <div class="mainInfo">
-        <div>
-          <div class="temperature" id="temperature">21.2°C</div>
-          <div class="condition" id="condition">Sunny</div>
-          <span class="time" id="time">12.34</span>
-          <span class="Date Day" id="date">2024-02-07</span>
         </div>
-        <div class="weather-state" id="weather-Img">
-          <img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" class="emoji" alt="Weather Icon"/>
+    
+        
+        <div class="heading" id="heading">Delhi </div>
+       
+    </header>
+    <main>
+        
+        <div class="weather-container">
+            <div class="mainInfo">
+                <div>
+                    <div class="temperature" id="temperature">21.2°C</div>
+
+                    <div class="condition" id="condition">Sunny</div>
+                    <span class="time" id="time">12.34</span>
+                    <span class="Date" class="Day">2024-02-07</span>
+
+                </div>
+               
+                <div class="weather-state" id="weather-Img">
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" class="emoji" alt="">
+                   
+                </div>
+
+            </div>
+        
+
         </div>
-      </div>
-    </div>
 
-    <div class="extraInfo">
-      <div class="Extra">
-        <div class="India">India</div>
-        <div class="Humidity">Humidity: 58</div>
-        <div class="pressure">pressure_mb: 1016.0</div>
-        <div class="wind-m">wind_mph: 6.0</div>
-        <div class="wind-k">wind_kph: 9.7</div>
-        <div class="wind-d">Wind Direction: E</div>
-      </div>
+        <div class="extraInfo">
 
-      <div class="extraSecond">
-        <div class="Info-">Extra Info</div>
-        <div class="lat">lat:</div>
-        <div class="lon">lon:</div>
-        <div class="cloud_Dir">Cloud:</div>
-        <div class="feels">Feels like: 18.3</div>
-        <div class="uv">UV: 0</div>
-      </div>
-    </div>
-  </main>
+            <div class="Extra">
+                <div class="India">India</div>
+                <div class="Humidity">Humidity:58</div>
+                <div class="pressure">pressure_mb:1016.0</div>
+                <div class="wind-m">win_mph:6.0</div>
+                <div class="wind-k">win_Kph:9.7</div>
+                <div class="wind-d">Wind Direction:E</div>
 
-  <script src="./script.js"></script>
+            </div>
+
+            <div class="extraSecond">
+                <div class="Info-">Extra Info</div>
+                <div class="lat" >lat:</div>
+                <div class="lon">lon:</div>
+                <div class="cloud_Dir">Cloud:</div>
+                <div class="feels">Feels like:18.3:</div>
+                <div class="uv">UV:0</div>
+            </div>
+        
+
+
+
+        </div>
+
+    </main>
+    <script src="./script.js"></script>
+
+
+
+   
+    
 </body>
 </html>

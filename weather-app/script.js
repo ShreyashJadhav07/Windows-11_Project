@@ -13,102 +13,120 @@ const weatherBackgrounds = {
   "Haze": "linear-gradient(to bottom, #D9A7C7, #FFFCDC)",  
   "Default": "linear-gradient(to bottom, #667db6, #0082c8)", 
   "Sunny": "linear-gradient(to bottom, #FFD700, #FFB347, #FFCC33)" 
+
 };
 
-const search = document.querySelector("#search-input");
-const button = document.querySelector("#button");
 
-button.addEventListener("click", async function () {
-  const location = search.value;
-  if (location !== "") {
-    const data = await fetchWeather(location);
-    if (data !== null) {
-      update(data);
-      search.value = "";
+const search=document.querySelector("#search-input");
+const button=document.querySelector("#button");
+
+button.addEventListener("click", async function(){
+    const location=search.value;
+    if(location != ""){
+        const data= await fetchWeather(location);
+        if(data != null){
+            update(data);
+            search.value="";
+        }
     }
-  }
-});
+})
 
-const heading = document.querySelector("#heading");
-const temperature = document.querySelector("#temperature");
-const icon = document.querySelector(".emoji");
-const condition = document.querySelector("#condition");
-const timeEle = document.querySelector("#time");
-const DateEle = document.querySelector("#date");
-const country = document.querySelector(".India");
-const humi = document.querySelector(".Humidity");
-const pressureInfo = document.querySelector(".pressure");
-const windMInfo = document.querySelector(".wind-m");
-const windKInfo = document.querySelector(".wind-k");
-const windDirInfo = document.querySelector(".wind-d");
-const latitude = document.querySelector(".lat");
-const longitude = document.querySelector(".lon");
-const cloud = document.querySelector(".cloud_Dir");
-const feelsLike = document.querySelector(".feels");
-const uvRay = document.querySelector(".uv");
+const heading=document.querySelector("#heading");
+const temperature=document.querySelector("#temperature");
+const icon=document.querySelector(".emoji");
 
-function update(data) {
-  const name = data.location.name;
-  const temp = data.current.temp_c;
-  const cond = data.current.condition.text;
-  const image = "https:" + data.current.condition.icon;
-  const timeData = data.location.localtime;
-  const [date, time] = timeData.split(" ");
-  const CountryName = data.location.country;
-  const HumidityNum = data.current.humidity;
-  const newPressure = data.current.pressure_mb;
-  const newWindM = data.current.wind_mph;
-  const newWindK = data.current.wind_kph;
-  const newWindD = data.current.wind_dir;
-  const newLat = data.location.lat;
-  const newLon = data.location.lon;
-  const newCloud = data.current.cloud;
-  const newFeels = data.current.feelslike_c;
-  const newUv = data.current.uv;
+const condition=document.querySelector("#condition");
+const timeEle= document.querySelector("#time");
+const DateEle=document.querySelector(".Date");
+const country=document.querySelector(".India");
+const humi=document.querySelector(".Humidity");
+const pressureInfo=document.querySelector(".pressure");
+const windMInfo=document.querySelector(".wind-m");
+const windKInfo=document.querySelector(".wind-k");
+const windDirInfo=document.querySelector(".wind-d");
+const latitude=document.querySelector(".lat");
+const longitude=document.querySelector(".lon");
+const cloud=document.querySelector(".cloud_Dir");
+const feelsLike=document.querySelector(".feels");
+const uvRay=document.querySelector(".uv");
 
-  DateEle.textContent = date;
-  timeEle.textContent = time;
-  heading.textContent = name;
-  temperature.textContent = temp + "°C";
-  condition.textContent = cond;
-  icon.src = image;
-  updateCondition(cond);
 
-  country.textContent = CountryName;
-  humi.textContent = "Humidity: " + HumidityNum;
-  pressureInfo.textContent = "pressure_mb: " + newPressure;
-  windMInfo.textContent = "wind_mph: " + newWindM;
-  windKInfo.textContent = "wind_kph: " + newWindK;
-  windDirInfo.textContent = "Wind Direction: " + newWindD;
-  latitude.textContent = "lat: " + newLat;
-  longitude.textContent = "lon: " + newLon;
-  cloud.textContent = "Cloud: " + newCloud;
-  feelsLike.textContent = "Feels like: " + newFeels;
-  uvRay.textContent = "UV: " + newUv;
+
+
+function update(data){
+    const name=data.location.name
+    const temp=data.current.temp_c;
+    const cond=data.current.condition.text;
+    
+    const image=data.current.condition.icon;
+    const timeData=data.location.localtime;
+    const [date,time]=timeData.split(" ");
+    const CountryName=data.location.country;
+    const HumidityNum=data.current.humidity;
+    const newPressure=data.current.pressure_mb;
+    const newWindM=data.current.wind_mph;
+    const newWindK=data.current.wind_kph;
+    const newWindD=data.current.wind_dir;
+
+    const newLat=data.location.lat;
+    const newLon=data.location.lon
+    const newCloud=data.current.cloud;
+    const newFeels=data.current.feelslike_c;
+    const newUv=data.current.uv;
+
+
+    DateEle.textContent=date;
+    timeEle.textContent=time;
+    
+
+
+
+    heading.textContent=name
+    temperature.textContent=temp+"°C";
+    condition.textContent=cond;
+    updateCondition(cond);
+    icon.src=image;
+    country.textContent=CountryName;
+    humi.textContent="Humidity:"+HumidityNum;
+    pressureInfo.textContent="pressure_mb:"+newPressure;
+    windMInfo.textContent="win_mph:"+newWindM;
+    windKInfo.textContent="win_Kph:"+newWindK;
+    windDirInfo.textContent="Wind Direction:"+newWindD;
+    latitude.textContent="lat:"+newLat;
+    longitude.textContent="lon:"+newLon;
+    cloud.textContent="Cloud:"+newCloud;
+    feelsLike.textContent="Feels like:"+newFeels;
+    uvRay.textContent="UV:"+newUv;
+
 }
-
+// To change Color based on condition
 function updateCondition(cond) {
-  const bg = weatherBackgrounds[cond] || weatherBackgrounds["Default"];
-  document.body.style.background = bg;
-  document.querySelector(".weather-container").style.background = bg;
-  document.querySelector(".Extra").style.background = bg;
-  document.querySelector(".extraSecond").style.background = bg;
+  document.body.style.background = weatherBackgrounds[cond] || weatherBackgrounds["Default"];
+   document.querySelector(".weather-container").style.background = 
+    weatherBackgrounds[cond] || weatherBackgrounds["Default"];
+
+    document.querySelector(".Extra").style.background=weatherBackgrounds[cond]||weatherBackgrounds["Default"];
+    document.querySelector(".extraSecond").style.background=weatherBackgrounds[cond]||weatherBackgrounds["Default"];
+    
 }
 
-async function fetchWeather(location) {
-  const url = `https://api.weatherapi.com/v1/current.json?key=81233e471ecc407bb5632607250702&q=${location}&aqi=no`;
-  try {
-    const response = await fetch(url);
-    if (response.status === 400) {
-      alert("Enter Correct Location");
-    } else if (response.status === 200) {
-      return await response.json();
-    }
-  } catch (error) {
-    console.error("Failed to fetch weather data:", error);
-  }
-}
+// fetchh => to get Data 
+ async function fetchWeather(location){
+const url=`https://api.weatherapi.com/v1/current.json?key=81233e471ecc407bb5632607250702&q=${location}&aqi=no`
 
+          const response=await fetch(url);
+          if(response.status==400){
+            alert("Enter Correct Location");
+          }
+          else if(response.status==200){
+            const json=  await response.json();
+            return json
+
+          }
+
+          
+
+}
 
 
 
