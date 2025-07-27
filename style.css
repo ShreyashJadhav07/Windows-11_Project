@@ -320,23 +320,27 @@ img:hover{
     z-index: 1;
     color: white;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .fileNameTwo{
     position: absolute;
     z-index: 1;
-    color: white;
+   
     left: 70px;
+    cursor: pointer;
 }
 .fileContainer2 img{
     height: 30px;
     margin-top: 2rem;
     margin-left: 4rem;
+    cursor: pointer;
 
 
 }
 .fileContainer2 p{
     margin-left: 4rem;
+    cursor: pointer;
 
 
 }
