@@ -49,7 +49,7 @@ img:hover{
 }
 
 
-#image2,#image3,#image6,#image8,#image9{
+#image2,#image3,#image6,#image8,#image9,#image10{
     height: 49px;
 }
 #image5{
@@ -169,6 +169,37 @@ img:hover{
 /*  */
 
 .vlc-frame.visible {
+    opacity: 1;            
+    visibility: visible;   
+    transition: opacity 0.5s ease, visibility 0s 0s; 
+}
+
+/* 
+ */
+
+ .hidden{
+    display: none;
+    opacity: 0;
+}
+/* #image10{
+    padding-left:100px;
+} */
+
+.jio-frame{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;   
+    height: 93.1vh;  
+    background: black;
+    border: none;
+    z-index: 1000;  
+    transition: opacity 0.5s ease, visibility 0s 0.5s;  
+    visibility: hidden; 
+
+ }
+
+ .jio-frame.visible {
     opacity: 1;            
     visibility: visible;   
     transition: opacity 0.5s ease, visibility 0s 0s; 
